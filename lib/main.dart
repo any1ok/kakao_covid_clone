@@ -97,6 +97,17 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                 SizedBox(
                   height: 10,
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("07.17 00:00 기준",
+                        style: TextStyle(fontSize: 13, color: Colors.black54)),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Icon(Icons.info_outline, color: Colors.black54),
+                  ],
+                ),
               ],
             ),
           ),
