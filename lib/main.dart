@@ -69,7 +69,13 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                         style: TextStyle(color: Colors.white, fontSize: 12))
                     )
                   ],
-                )
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text("코로나바이러스감염증-19",
+                    style:
+                    TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
               ],
             ),
           ),
