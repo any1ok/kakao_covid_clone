@@ -50,32 +50,53 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("위기경보",
+                    const Text("위기경보",
                     style: TextStyle(
                       fontSize: 16,
                     ),),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,  // 가상박스를 넣어 거리 조절 지린다~
                     ),
                     Container(
                       padding:
-                      EdgeInsets.symmetric(vertical: 5,horizontal: 10),
-                      decoration: BoxDecoration(
+                      const EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+                      decoration: const BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.all(
                           Radius.circular(15.0),
                         )),
-                      child: Text("심각",
+                      child: const Text("심각",
                         style: TextStyle(color: Colors.white, fontSize: 12))
                     )
                   ],
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Text("코로나바이러스감염증-19",
+                    style:
+                    TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                const SizedBox(
+                  height: 10,
+                ),
+                TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+                    primary: Colors.white, // 터치시 색깔 변경
+                    backgroundColor: Colors.blueAccent[700],
+                    shape: StadiumBorder(),
+                  ),
+                  child: const Text("QR체크인",
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold)
+                  ),
+                ),
                 SizedBox(
                   height: 10,
                 ),
-                Text("코로나바이러스감염증-19",
-                    style:
-                    TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
               ],
             ),
           ),
