@@ -108,6 +108,61 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                     Icon(Icons.info_outline, color: Colors.black54),
                   ],
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(15.0),
+                        )),
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CovidInfo(
+                          infoName: "확진환자",
+                          infoNumber: "1,455",
+                          infoTutal: "176,500",
+                          infocolor: Colors.red,
+                        ),
+                        Container(
+                          height: 60,
+                          width: 1.2,
+                          color: Colors.grey.withOpacity(0.3),
+                        ),
+                        CovidInfo(
+                          infoName: "격리해제",
+                          infoNumber: "847",
+                          infoTutal: "157,960",
+                          infocolor: Colors.blueAccent[700],
+                        ),
+                        Container(
+                          height: 60,
+                          width: 1.2,
+                          color: Colors.grey.withOpacity(0.3),
+                        ),
+                        CovidInfo(
+                          infoName: "검사 중",
+                          infoNumber: "9,444",
+                          infoTutal: "227,636",
+                          infocolor: Colors.black87,
+                        ),
+                        Container(
+                          height: 60,
+                          width: 1.2,
+                          color: Colors.grey.withOpacity(0.3),
+                        ),
+                        CovidInfo(
+                          infoName: "사망자",
+                          infoNumber: "4",
+                          infoTutal: "2,055",
+                          infocolor: Colors.black87,
+                        ),
+                      ],
+                    ),
+                  ),
+                )
               ],
             ),
           ),
@@ -117,3 +172,59 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
   }
 }
 
+
+
+class CovidInfo extends StatelessWidget {
+  const CovidInfo({
+    @required this.infoName,
+    @required this.infoNumber,
+    @required this.infoTutal,
+    @required this.infocolor,
+  });
+
+  final String? infoName;
+  final String? infoNumber;
+  final String? infoTutal;
+  final Color? infocolor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 4.0),
+      //padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("$infoName",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 12,
+              )),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            //mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Icon(Icons.arrow_drop_up, color: infocolor, size: 25),
+              Text(
+                "$infoNumber",
+                style: TextStyle(
+                    color: infocolor,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          Text(
+            "$infoTutal",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 12,
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
