@@ -146,7 +146,7 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                           infoName: "검사 중",
                           infoNumber: "9,444",
                           infoTutal: "227,636",
-                          infocolor: Colors.black87,
+                          infocolor: Colors.black87,//
                         ),
                         Container(
                           height: 60,
