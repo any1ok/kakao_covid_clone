@@ -166,6 +166,25 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
               ],
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 500,
+            child: Column(
+              children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "확진자 추이",
+                    style:
+                    TextStyle(fontSize: 18,fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.end,
+                  )
+                )
+              ],
+            ),
+          )
         ]
     )
     );
