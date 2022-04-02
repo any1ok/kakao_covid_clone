@@ -166,6 +166,72 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
               ],
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 500,
+            child: Column(
+              children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "확진자 추이",
+                    style:
+                    TextStyle(fontSize: 18,fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.end,
+                  )
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("최근 7일"),
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.white.withOpacity(0),
+                        primary: Colors.blueAccent[700],
+                        padding: EdgeInsets.symmetric(
+                          vertical: 12,horizontal: 30 // 빈공간을 늘리면 자동으로 크기가 맞춰짐
+                        ),
+                        side: BorderSide(
+                          width: 1,color: Colors.blueAccent
+                        )
+                      ),),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("전체 기간"),
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.white.withOpacity(0),
+                          primary: Colors.redAccent[700],
+                          padding: EdgeInsets.symmetric(
+                              vertical: 12,horizontal: 30 // 빈공간을 늘리면 자동으로 크기가 맞춰짐
+                          ),
+                          side: BorderSide(
+                              width: 1,color: Colors.blueAccent
+                          )
+                      ),),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("전체 누적"),
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.white.withOpacity(0),
+                          primary: Colors.greenAccent[700],
+                          padding: EdgeInsets.symmetric(
+                              vertical: 12,horizontal: 30 // 빈공간을 늘리면 자동으로 크기가 맞춰짐
+                          ),
+                          side: BorderSide(
+                              width: 1,color: Colors.blueAccent
+                          )
+                      ),),
+                  ]
+                )
+              ],
+            ),
+          )
         ]
     )
     );
