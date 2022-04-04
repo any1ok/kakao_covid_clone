@@ -197,7 +197,7 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                         padding: EdgeInsets.symmetric(
                           vertical: 12,horizontal: 30 // 빈공간을 늘리면 자동으로 크기가 맞춰짐
                         ),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 1,color: Colors.blueAccent
                         )
                       ),),
