@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:fl_chart/fl_chart.dart';
 void main() {
   runApp(MyApp());
 }
@@ -197,7 +197,7 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                         padding: EdgeInsets.symmetric(
                           vertical: 12,horizontal: 30 // 빈공간을 늘리면 자동으로 크기가 맞춰짐
                         ),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 1,color: Colors.blueAccent
                         )
                       ),),
@@ -228,7 +228,54 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                           )
                       ),),
                   ]
-                )
+                ),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 30,horizontal: 5),
+              height: 400, // 위에이미 정해져있음
+              width: 600,
+              child: BarChart(
+                BarChartData(
+                  minY: 0,
+                  maxY: 1800,
+                  alignment: BarChartAlignment.spaceAround,
+                  backgroundColor: Colors.black.withOpacity(0.2),
+                  //바탕배경색
+                  gridData: FlGridData(
+                    show: true,  //전체를 보여줄지 말지 결정
+                    drawHorizontalLine: true, // y축 그리드 보이기
+                    horizontalInterval: 100, //y축 수평 간격 360
+                    //verticalInterval: 5,
+                  ),
+                  barTouchData: BarTouchData(
+                    enabled: true, //determines to enable or disable touch behaviors
+                    touchTooltipData: BarTouchTooltipData(
+                      direction: TooltipDirection.top, // 숫자값 위일지 아래일지
+                      tooltipBgColor: Colors.white.withOpacity(0), // 배경색 withOpacity 색깔
+                      //꼭대기 수치 배경칼라
+                      tooltipPadding: const EdgeInsets.all(0), // 밖
+                      //꼭대기 수치 패딩
+                      tooltipMargin: 1, // 안
+                      //꼭대기 수치 마진
+                      getTooltipItem: (
+                          BarChartGroupData group,
+                          int groupIndex,
+                          BarChartRodData rod,
+                          int rodIndex,
+                          ) {
+                        return BarTooltipItem(
+                          rod.y.round().toString(),
+                          TextStyle(
+                            fontSize: 12.0,
+                            color: Colors.black87, //꼭대기 수치칼라
+                            //fontWeight: FontWeight.bold,
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+
+              ),
+            ))
               ],
             ),
           )
