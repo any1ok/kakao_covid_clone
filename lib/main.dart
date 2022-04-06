@@ -273,7 +273,7 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                       },
                     ),
                   ),
-                //다시 틀잡기
+                // 0406
               ),
             ))
               ],
