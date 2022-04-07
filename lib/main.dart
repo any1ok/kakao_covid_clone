@@ -273,7 +273,152 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                       },
                     ),
                   ),
-                // 0406
+                titlesData: FlTitlesData(
+                  show: true,
+                  rightTitles: SideTitles(
+                    // showTitles: true,
+                  ),
+                  topTitles: SideTitles(
+                    //showTitles: true,
+                  ),
+                  bottomTitles: SideTitles(
+                    showTitles: true,
+                    getTextStyles: (context,value) => const TextStyle(
+                        color: Colors.black87,
+                        ////fontWeight: FontWeight.bold,
+                        fontSize: 12),
+                    margin: 10,
+                    getTitles: (double value) {
+                      switch (value.toInt()) {
+                        case 0:
+                          return '7.10';
+                        case 1:
+                          return '7.11';
+                        case 2:
+                          return '7.12';
+                        case 3:
+                          return '7.13';
+                        case 4:
+                          return '7.14';
+                        case 5:
+                          return '7.15';
+                        case 6:
+                          return '7.16';
+                        default:
+                          return '';
+                      }
+                    },
+                  ),
+                  leftTitles: SideTitles(
+                    showTitles: true,
+                    getTextStyles: (context,value) => const TextStyle(
+                      color: Colors.black87,
+                      //fontWeight: FontWeight.bold,
+                      fontSize: 12,
+                      // letterSpacing: 20
+                    ),
+                    interval: 360.0,
+                    margin: 10,
+                  ),
+                ),
+                  borderData: FlBorderData(
+                    border: Border(
+                      top: BorderSide(color: Colors.black12),
+                      bottom: BorderSide(color: Colors.black12),
+                      //left: BorderSide(color: Colors.red),
+                    ),
+                    show: true,
+                  ),
+                  barGroups: [
+                    BarChartGroupData(
+                      x: 0,
+                      barRods: [
+                        BarChartRodData(
+                          borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(10),
+                          ),
+                          y: 1324,
+                          //gradientFrom: Offset(0.5, 1), // 그라디언트
+                          colors: [Colors.orangeAccent, Colors.redAccent],
+                        )
+                      ],
+                      showingTooltipIndicators: [0],
+                    ),
+                    BarChartGroupData(
+                      x: 1,
+                      barRods: [
+                        BarChartRodData(
+                          //width: 20,
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(10),
+                            ),
+                            y: 1100,
+                            colors: [Colors.orangeAccent, Colors.redAccent])
+                      ],
+                      showingTooltipIndicators: [0],
+                    ),
+                    BarChartGroupData(
+                      x: 2,
+                      barRods: [
+                        BarChartRodData(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(10),
+                            ),
+                            y: 1150,
+                            colors: [Colors.orangeAccent, Colors.redAccent])
+                      ],
+                      showingTooltipIndicators: [0],
+                    ),
+                    BarChartGroupData(
+                      x: 3,
+                      barRods: [
+                        BarChartRodData(
+                            y: 1614,
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(10),
+                            ),
+                            colors: [Colors.orangeAccent, Colors.red])
+                      ],
+                      showingTooltipIndicators: [0],
+                    ),
+                    BarChartGroupData(
+                      x: 4,
+                      barRods: [
+                        BarChartRodData(
+                          y: 1599,
+                          borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(10),
+                          ),
+                          colors: [Colors.orangeAccent, Colors.red],
+                        )
+                      ],
+                      showingTooltipIndicators: [0],
+                    ),
+                    BarChartGroupData(
+                      x: 5,
+                      barRods: [
+                        BarChartRodData(
+                            y: 1536,
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(10),
+                            ),
+                            colors: [Colors.orangeAccent, Colors.red])
+                      ],
+                      showingTooltipIndicators: [0],
+                    ),
+                    BarChartGroupData(
+                      x: 6,
+                      barRods: [
+                        BarChartRodData(
+                            y: 1455,
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(10),
+                            ),
+                            colors: [Colors.orangeAccent, Colors.red])
+                      ],
+                      showingTooltipIndicators: [0],
+                    )
+                  ],
               ),
             ))
               ],
