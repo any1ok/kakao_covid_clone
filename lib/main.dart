@@ -281,7 +281,7 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                   topTitles: SideTitles(
                     //showTitles: true,
                   ),
-                  bottomTitles: SideTitles(
+                  bottomTitles: SideTitles( //그냥 아래두기
                     showTitles: true,
                     getTextStyles: (context,value) => const TextStyle(
                         color: Colors.black87,
@@ -309,7 +309,7 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                       }
                     },
                   ),
-                  leftTitles: SideTitles(
+                  leftTitles: SideTitles( // 왼쪽 타이틀
                     showTitles: true,
                     getTextStyles: (context,value) => const TextStyle(
                       color: Colors.black87,
@@ -321,10 +321,10 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                     margin: 10,
                   ),
                 ),
-                  borderData: FlBorderData(
+                  borderData: FlBorderData( // 겉 테두리
                     border: Border(
-                      top: BorderSide(color: Colors.black12),
-                      bottom: BorderSide(color: Colors.black12),
+                      top: BorderSide(color: Colors.black12), //위쪽
+                      bottom: BorderSide(color: Colors.black12), //아래쪽
                       //left: BorderSide(color: Colors.red),
                     ),
                     show: true,
@@ -332,14 +332,14 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                   barGroups: [
                     BarChartGroupData(
                       x: 0,
-                      barRods: [
-                        BarChartRodData(
+                      barRods: [ // 막대기
+                        BarChartRodData( // 차트 막대기 데이타
                           borderRadius: BorderRadius.vertical(
                             top: Radius.circular(10),
                           ),
                           y: 1324,
                           //gradientFrom: Offset(0.5, 1), // 그라디언트
-                          colors: [Colors.orangeAccent, Colors.redAccent],
+                          colors: [Colors.orangeAccent, Colors.redAccent], //그라데이션 가능
                         )
                       ],
                       showingTooltipIndicators: [0],
