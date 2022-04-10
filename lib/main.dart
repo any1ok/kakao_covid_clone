@@ -342,7 +342,7 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                           ),
                           y: 1324,
                           //gradientFrom: Offset(0.5, 1), // 그라디언트
-                          colors: [Colors.orangeAccent, Colors.redAccent], //그라데이션 가능
+                          colors: [Colors.orangeAccent, Colors.redAccent, Colors.black], //그라데이션 가능
                         )
                       ],
                       showingTooltipIndicators: [0],
