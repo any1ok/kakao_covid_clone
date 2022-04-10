@@ -488,4 +488,4 @@ class CovidInfo extends StatelessWidget {
       ),
     );
   }
-}
+} //마무리
