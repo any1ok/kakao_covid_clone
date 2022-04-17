@@ -58,19 +58,19 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                       width: 10,  // 가상박스를 넣어 거리 조절 지린다~
                     ),
                     Container(
-                      padding:
+                      padding: // 패딩의 여유분
                       const EdgeInsets.symmetric(vertical: 5,horizontal: 10),
                       decoration: const BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.all(
-                          Radius.circular(15.0),
+                          Radius.circular(15.0), //둘레 형태
                         )),
                       child: const Text("심각",
                         style: TextStyle(color: Colors.white, fontSize: 12))
                     )
                   ],
                 ),
-                const SizedBox(
+                const SizedBox(  //sized box 는 빈칸 제조용
                   height: 10,
                 ),
                 const Text("코로나바이러스감염증-19",
@@ -85,7 +85,7 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
                     padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
                     primary: Colors.white, // 터치시 색깔 변경
                     backgroundColor: Colors.blueAccent[700],
-                    shape: StadiumBorder(),
+                    shape: BeveledRectangleBorder(), //https://api.flutter.dev/flutter/painting/OutlinedBorder-class.html
                   ),
                   child: const Text("QR체크인",
                       style: TextStyle(
@@ -236,7 +236,7 @@ class _MyCovid19PageState extends State<MyCovid19Page> {
               child: BarChart(
                 BarChartData(
                   minY: 0,
-                  maxY: 1800,
+                  maxY: 1800, // 최대수치
                   alignment: BarChartAlignment.spaceAround,
                   backgroundColor: Colors.black.withOpacity(0.2),
                   //바탕배경색
